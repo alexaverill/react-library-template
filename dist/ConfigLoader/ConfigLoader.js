@@ -1,4 +1,4 @@
-var t = { VITE_LOG_LEVEL: "DEBUG", BASE_URL: "/", MODE: "production", DEV: !1, PROD: !0, SSR: !1 };
+var t = { VITE_LOGGING_LEVEL: "DEBUG", BASE_URL: "/", MODE: "production", DEV: !1, PROD: !0, SSR: !1 };
 function n() {
   let r = a(), e = i();
   return [...r, ...e];
@@ -6,8 +6,8 @@ function n() {
 function u() {
   let r = n();
   for (let e of r)
-    if (e.LOG_LEVEL)
-      return e.LOG_LEVEL;
+    if (e.LOGGING_LEVEL)
+      return e.LOGGING_LEVEL;
   return null;
 }
 function a() {
@@ -27,6 +27,6 @@ function i() {
   return r;
 }
 export {
-  u as GetDebugLevel,
+  u as GetLoggingLevel,
   n as LoadConfig
 };

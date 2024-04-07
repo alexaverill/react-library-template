@@ -1,23 +1,23 @@
 var s = Object.defineProperty;
-var l = (o, e, t) => e in o ? s(o, e, { enumerable: !0, configurable: !0, writable: !0, value: t }) : o[e] = t;
-var i = (o, e, t) => (l(o, typeof e != "symbol" ? e + "" : e, t), t);
-import { GetDebugLevel as L } from "../ConfigLoader/ConfigLoader.js";
+var L = (e, o, t) => o in e ? s(e, o, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[o] = t;
+var i = (e, o, t) => (L(e, typeof o != "symbol" ? o + "" : o, t), t);
+import { GetLoggingLevel as l } from "../ConfigLoader/ConfigLoader.js";
 import "react/jsx-runtime";
 class r {
-  static Debug(e) {
-    this.LogLevel === "DEBUG" && console.log(e);
+  static Debug(o) {
+    this.LogLevel === "DEBUG" && console.log(o);
   }
-  static Info(e) {
-    (this.LogLevel === "INFO" || this.LogLevel === "DEBUG") && console.info(e);
+  static Info(o) {
+    (this.LogLevel === "INFO" || this.LogLevel === "DEBUG") && console.info(o);
   }
-  static Warn(e) {
-    (this.LogLevel === "WARN" || this.LogLevel === "DEBUG") && console.warn(e);
+  static Warn(o) {
+    (this.LogLevel === "WARN" || this.LogLevel === "DEBUG") && console.warn(o);
   }
-  static Error(e) {
-    console.error(e);
+  static Error(o) {
+    console.error(o);
   }
 }
-i(r, "LogLevel", L() ?? "PROD");
+i(r, "LogLevel", l() ?? "PROD");
 export {
   r as Logging
 };

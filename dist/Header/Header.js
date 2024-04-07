@@ -1,11 +1,12 @@
 import '../assets/Header.css';
-import { jsx as e } from "react/jsx-runtime";
-const r = "_header_1jcmu_1", a = {
-  header: r
+import { jsx as a } from "react/jsx-runtime";
+const d = "_header_1jcmu_1", r = {
+  header: d
 };
-function c() {
-  return /* @__PURE__ */ e("h1", { className: a.header, children: "Header" });
+function o({ className: e, children: s }) {
+  let t = e ? `${e} ${r.header}` : `${r.header}`;
+  return /* @__PURE__ */ a("h1", { className: t, children: s });
 }
 export {
-  c as Header
+  o as Header
 };

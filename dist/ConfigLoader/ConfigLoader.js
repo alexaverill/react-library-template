@@ -1,30 +1,30 @@
 var t = { VITE_LOG_LEVEL: "DEBUG", BASE_URL: "/", MODE: "production", DEV: !1, PROD: !0, SSR: !1 };
 function n() {
-  let l = a(), e = i();
-  return [...l, ...e];
+  let r = a(), e = i();
+  return [...r, ...e];
 }
 function u() {
-  let l = n();
-  for (let e of l)
-    if (console.log(e), e.LOG_LEVEL)
+  let r = n();
+  for (let e of r)
+    if (e.LOG_LEVEL)
       return e.LOG_LEVEL;
   return null;
 }
 function a() {
-  let l = [];
+  let r = [];
   for (let e in t) {
-    let r = t[e];
-    e.includes("VITE_") && (e = e.replace("VITE_", "")), l.push({ [e]: r });
+    let l = t[e];
+    e.includes("VITE_") && (e = e.replace("VITE_", "")), r.push({ [e]: l });
   }
-  return l;
+  return r;
 }
 function i() {
-  let l = [];
+  let r = [];
   for (let e in process.env) {
-    let r = process.env[e];
-    e.includes("REACT_") && (e = e.replace("REACT_", "")), l.push({ [e]: r });
+    let l = process.env[e];
+    e.includes("REACT_APP_") && (e = e.replace("REACT_APP_", "")), r.push({ [e]: l });
   }
-  return l;
+  return r;
 }
 export {
   u as GetDebugLevel,

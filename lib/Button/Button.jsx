@@ -1,6 +1,6 @@
 import classes from './Button.module.css';
-export function Button(){
+export function Button(props){
     return(
-        <button className={classes.testButton}>Button</button>
+        <button className={classes.testButton} onClick={props.onClick}>Button</button>
     )
 }

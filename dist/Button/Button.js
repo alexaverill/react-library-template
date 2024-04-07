@@ -1,11 +1,11 @@
 import '../assets/Button.css';
-import { jsx as t } from "react/jsx-runtime";
-const n = "_testButton_1fn1e_1", o = {
-  testButton: n
+import { jsx as n } from "react/jsx-runtime";
+const o = "_testButton_1fn1e_1", s = {
+  testButton: o
 };
-function e() {
-  return /* @__PURE__ */ t("button", { className: o.testButton, children: "Button" });
+function u(t) {
+  return /* @__PURE__ */ n("button", { className: s.testButton, onClick: t.onClick, children: "Button" });
 }
 export {
-  e as Button
+  u as Button
 };
